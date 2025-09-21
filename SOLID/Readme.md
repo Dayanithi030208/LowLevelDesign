@@ -1,15 +1,48 @@
----> System Design
--- Before building any system we have to design it, Designing of a system further classified in two types which are HLD (High Level Design) and LLD (Low Level Design)
--- High level design is all about abstractive view of the design and it is more user oriented design which have what are the technologies we going to use and what should be the path of system development and the overall overview of the system
--- Low level design is more over devloper side which consist of uml diagrams , design principles , design patterns , oop concepts , exception handling , it is providing clear and internal architecture of the system , after the completion fo LLD only devlopment will start 
-SOLID principles :
-S - Single responsibility principle :
-S states a class should have one reason to change which means it should have only one responsibility , because if it has multiple responsibilities it may affect the data flow in class.
-O - Open closed principle
-O states Software entities should open for extension and closed for modifications , because multiple modification of existing code in a class can affect the existing feature so by this principle it is enusred and it allow to add a new functionality without affecting the existing entities.
-L - Liskov Substitution principle :
-L states that objects of the superclass should be replacable by objects of the child without affecting the program correctness
-I - Interface Segregation Principle :
-I states that we should not force a client to depend upon the interface which is didn't use by them .
-D - Dependency Inversion Principle :
-D - states  a high level module should not depend upon low level module , both can depend upon abstraction rather raw implemenetation . 
+# System Design
+
+Before building any system we have to **design** it.  
+System design is generally classified into two types:
+
+## High-Level Design (HLD)
+- Gives an **abstract view** of the system.  
+- **User-oriented**: focuses on *what* the system will do.  
+- Describes:
+  - Overall architecture and data flow
+  - Technologies and platforms to use
+  - Path of system development
+- Provides an **overview** that stakeholders can understand.
+
+## Low-Level Design (LLD)
+- **Developer-oriented**: focuses on *how* the system will be built.  
+- Includes:
+  - UML diagrams
+  - Design principles and patterns
+  - Object-oriented concepts
+  - Exception handling details
+- Provides a **clear internal architecture** of the system.  
+- Development typically starts **after LLD is complete**.
+
+---
+
+# SOLID Principles
+
+### S – Single Responsibility Principle
+A class should have **only one reason to change**.  
+Each class must handle **one responsibility** to avoid unexpected side effects when requirements change.
+
+### O – Open/Closed Principle
+Software entities should be **open for extension** but **closed for modification**.  
+New functionality can be added (e.g., through interfaces or inheritance) **without altering existing code**, reducing the risk of breaking features.
+
+### L – Liskov Substitution Principle
+Objects of a **superclass** should be **replaceable with objects of its subclasses** without affecting program correctness.  
+This ensures proper use of inheritance.
+
+### I – Interface Segregation Principle
+Clients **should not be forced to depend** on methods they do not use.  
+Prefer multiple **specific** interfaces over a single large one.
+
+### D – Dependency Inversion Principle
+High-level modules **should not depend on** low-level modules.  
+Both should depend on **abstractions**, not on concrete implementations, to keep code loosely coupled and flexible.
+
