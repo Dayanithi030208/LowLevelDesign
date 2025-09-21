@@ -1,0 +1,45 @@
+package com.lowleveldesign.practice;
+// Bank Features for Deposit and Withdraw 
+public class BankFeatures {
+	Deposit depositobject=new Deposit();
+	depositobject.DepositMoney();
+	Withdraw withdrawobject=new Withdraw();
+	withdrawobject.WithdrawMoney();
+}
+class Verification{
+	public static boolean VerifyUser(int Account_Number,int Password) {
+		return true;
+	}
+}
+class Deposit{
+	public int Account_Number;
+	public int Password;
+	Verification verification=new Verification();
+	public boolean isVerifiedUser=verification.VerifyUser(Account_Number,Password);
+	private static void DepositMoney(boolean isVerifiedUser) {
+		if(isVerfiedUser) {
+			getAmount();
+			updateBalance();
+			return ;
+		}else {
+			throwErrorMessage();
+			return;
+		}
+   }
+}
+class Withdraw{
+	public int Account_Number;
+	public int Password;
+	Verification verification=new Verification();
+	public boolean isVerifiedUser=verification.VerifyUser(Account_Number,Password);
+	private static void WithdrawMoney(isVerifiedUser) {
+		if(isVerfiedUser) {
+			giveAmount();
+			updateBalance();
+			return ;
+		}else {
+			throwErrorMessage();
+			return;
+		}
+   }
+}
