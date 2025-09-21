@@ -5,7 +5,7 @@ import java.util.Arrays;
 // Task is Collect student marks and calculate average and grade and store the report
 public class StudentReport {
 	public static void main(String[] arges) {
-		int[] marks= {91,82,73,64,55};
+		int[] marks= {91,82,73,64,55};// marks earned by student in subject
 		Students s=new Students("Dayanithi",marks);
 		Calculate c=new Calculate();
 		double average=c.calculateAverage(s);
@@ -17,7 +17,8 @@ public class StudentReport {
 }
 class Students{
 	private String name;
-	private int[] marks=new int[5];
+	public int totalsubjects=5;
+	private int[] marks=new int[totalsubjects];
 	public String getName() {
 		return name;
 	}
@@ -33,7 +34,7 @@ class Calculate{
 	public double average;
 	public double calculateAverage(Students s) {
 		int[] marktotal=s.getMarks();
-		int no_of_subjects=marktotal.length;
+		int no_of_subjects=s.totalsubjects;
 		int sum=0;
 		for(int mark:marktotal) sum+=mark;
 		return (double)sum/no_of_subjects;
@@ -56,4 +57,3 @@ class Report{
 		System.out.println(average+" "+grade);
 	}
 }
-
